@@ -2,7 +2,7 @@
 
 Course materials for **Prof. Iqram Hussain’s MAT 120 Statistics class at the City University of New York (CUNY)**.
 
-This repository contains weekly **R computer labs designed for Google Colab**. Students do **not** need to install R or RStudio. Open the weekly notebook in Colab, run the R cells, answer the questions, and save/submit the completed notebook as instructed.
+This repository contains weekly **R computer labs designed for Google Colab**, **in-class exercises using real open data**, and a **post-lab quiz after every lab**. Students do **not** need to install R or RStudio. Open the weekly notebook in Colab, run the R cells, answer the questions, and save/submit the completed notebook as instructed.
 
 ## Open the labs in Google Colab
 
@@ -33,6 +33,18 @@ This repository contains weekly **R computer labs designed for Google Colab**. S
 | 8 | Sampling distributions and the Central Limit Theorem |
 | 9 | Confidence intervals and margin of error |
 | 10 | One-sample hypothesis testing |
+
+## Lab format
+
+Each weekly Colab notebook now contains:
+
+1. Guided R/statistics lab
+2. Additional in-class practice
+3. A real-data exercise using public/open datasets, including NYC Open Data
+4. Interpretation questions
+5. A post-lab quiz
+
+The open-data activities use real NYC datasets such as **311 Service Requests**, **Motor Vehicle Collisions**, and **Air Quality and Health Impacts**.
 
 ## Instructions for students
 
