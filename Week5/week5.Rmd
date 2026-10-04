@@ -1,0 +1,88 @@
+---
+title: "MAT 120 Computer Lab - Week 5"
+subtitle: "Probability, Conditional Probability, and Independence"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Learning goals
+
+- construct a two-way table,
+- calculate joint and conditional probabilities,
+- compare groups using conditional proportions,
+- check whether two events appear independent.
+
+# Example: Reading for fun
+
+Suppose 500 children were surveyed.
+
+```{r}
+reading <- matrix(
+  c(48,182,
+    76,194),
+  nrow = 2,
+  byrow = FALSE,
+  dimnames = list(
+    Reading = c("Yes","No"),
+    Gender = c("Boy","Girl")
+  )
+)
+
+reading
+```
+
+Add totals.
+
+```{r}
+addmargins(reading)
+```
+
+Overall proportions:
+
+```{r}
+prop.table(reading)
+```
+
+Conditional distribution of reading status within each gender:
+
+```{r}
+prop.table(reading, margin = 2)
+```
+
+# Questions
+
+1. What proportion of the surveyed children are boys?
+2. What proportion of boys read for fun every day?
+3. What proportion of girls read for fun every day?
+4. Do the conditional percentages look the same?
+5. Based on the sample, does reading-for-fun appear independent of gender? Explain.
+
+# Independence check
+
+Let:
+
+- A = child reads for fun,
+- B = child is a boy.
+
+Compare `P(A and B)` with `P(A)P(B)`.
+
+```{r}
+p_A_and_B <- 48/500
+p_A <- (48 + 76)/500
+p_B <- (48 + 182)/500
+
+p_A_and_B
+p_A * p_B
+```
+
+# Your Turn
+
+A class survey produced:
+
+|                 | Uses tutoring | Does not use tutoring |
+|-----------------|--------------:|-----------------------:|
+| Passed exam     | 36            | 54                     |
+| Did not pass    | 9             | 21                     |
+
+Create the table in R, calculate conditional pass rates, and discuss whether exam result appears independent of tutoring use.
