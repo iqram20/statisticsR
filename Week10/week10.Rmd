@@ -1,0 +1,113 @@
+---
+title: "MAT 120 Computer Lab - Week 10"
+subtitle: "One-Sample Hypothesis Testing"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Learning goals
+
+- state null and alternative hypotheses,
+- calculate a one-sample t statistic,
+- obtain and interpret a p-value,
+- make a statistical decision using alpha,
+- write a conclusion in context.
+
+# Example: Average wind speed
+
+A researcher claims that the population mean wind speed is 8 mph.
+
+A random sample of 32 days gives:
+
+- x-bar = 8.2 mph
+- s = 0.6 mph
+- n = 32
+
+We test:
+
+H0: mu = 8
+
+Ha: mu != 8
+
+at alpha = 0.05.
+
+# Test statistic
+
+```{r}
+xbar <- 8.2
+mu0 <- 8
+s <- 0.6
+n <- 32
+
+t_stat <- (xbar - mu0) / (s / sqrt(n))
+t_stat
+```
+
+Degrees of freedom:
+
+```{r}
+df <- n - 1
+df
+```
+
+Two-tailed p-value:
+
+```{r}
+p_value <- 2 * (1 - pt(abs(t_stat), df))
+p_value
+```
+
+# Decision
+
+```{r}
+alpha <- 0.05
+
+if (p_value < alpha) {
+  print("Reject H0")
+} else {
+  print("Do not reject H0")
+}
+```
+
+# Questions
+
+1. State H0 and Ha.
+2. Is this a left-tailed, right-tailed, or two-tailed test?
+3. Report the test statistic.
+4. Report the p-value.
+5. Compare the p-value with alpha.
+6. Write the final conclusion in context.
+
+# Using raw data with t.test()
+
+```{r}
+visits <- c(3,2,1,3,7,2,9,4,6,6,
+            8,0,5,6,4,2,1,3,4,1)
+
+mean(visits)
+sd(visits)
+
+t.test(visits,
+       mu = 5.8,
+       alternative = "less")
+```
+
+# Your Turn
+
+A bank reports that the historical mean savings account balance is $1300.
+A new random sample of 45 accounts has:
+
+- x-bar = $1350
+- s = $80
+
+At alpha = 0.10, test whether the current population mean balance is different from $1300.
+
+Show:
+
+1. H0 and Ha
+2. test statistic
+3. degrees of freedom
+4. p-value
+5. decision
+6. conclusion in context
