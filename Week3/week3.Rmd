@@ -1,0 +1,80 @@
+---
+title: "MAT 120 Computer Lab - Week 3"
+subtitle: "Descriptive Statistics and Boxplots"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Learning goals
+
+- calculate mean, median, standard deviation, and quartiles,
+- obtain a five-number summary,
+- create and interpret a boxplot,
+- relate skewness to the choice of center.
+
+# Example: Test scores
+
+```{r}
+scores <- c(
+  31,33,35,36,40,40,41,43,45,47,
+  48,51,51,52,55,56,59,70,71,74,
+  76,78,84,87,87,90,93
+)
+```
+
+Summary statistics:
+
+```{r}
+mean(scores)
+median(scores)
+sd(scores)
+fivenum(scores)
+summary(scores)
+```
+
+Histogram:
+
+```{r}
+hist(scores,
+     main = "Test Score Distribution",
+     xlab = "Score")
+```
+
+Boxplot:
+
+```{r}
+boxplot(scores,
+        horizontal = TRUE,
+        main = "Boxplot of Test Scores",
+        xlab = "Score")
+```
+
+# Questions
+
+1. Report the mean and median.
+2. Report the five-number summary.
+3. What score is the median?
+4. What score is approximately the third quartile?
+5. Does the distribution appear symmetric, skewed left, or skewed right?
+6. Which better describes the center here: mean or median? Explain.
+
+# Comparing two groups
+
+```{r}
+group_A <- c(72,75,77,79,81,82,83,85,86,88)
+group_B <- c(55,64,68,70,74,78,82,89,94,99)
+
+boxplot(group_A, group_B,
+        names = c("Group A","Group B"),
+        main = "Comparison of Two Groups")
+```
+
+# Your Turn
+
+For each group:
+
+1. Find the mean.
+2. Find the standard deviation.
+3. Find the five-number summary.
+4. Compare center and spread in one or two sentences.
