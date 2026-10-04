@@ -1,0 +1,89 @@
+---
+title: "MAT 120 Computer Lab - Week 9"
+subtitle: "Confidence Intervals"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Learning goals
+
+- construct a one-sample t confidence interval,
+- interpret a confidence interval correctly,
+- calculate margin of error,
+- understand how confidence level and sample size affect interval width.
+
+# Example: Newborn weights
+
+Suppose the weights (lb) of 10 randomly selected newborns are:
+
+```{r}
+weights <- c(6.1, 6.8, 7.0, 7.2, 7.4,
+             7.5, 7.7, 7.8, 8.1, 7.0)
+```
+
+Sample statistics:
+
+```{r}
+mean(weights)
+sd(weights)
+length(weights)
+```
+
+90% confidence interval:
+
+```{r}
+t.test(weights, conf.level = 0.90)$conf.int
+```
+
+# Manual calculation
+
+```{r}
+xbar <- mean(weights)
+s <- sd(weights)
+n <- length(weights)
+df <- n - 1
+
+t_star <- qt(1 - 0.10/2, df)
+margin_error <- t_star * s / sqrt(n)
+
+lower <- xbar - margin_error
+upper <- xbar + margin_error
+
+t_star
+margin_error
+c(lower, upper)
+```
+
+# Questions
+
+1. State the interval.
+2. Interpret it in context.
+3. What is the margin of error?
+4. Would a 95% confidence interval be wider or narrower than a 90% interval using the same data?
+5. What happens to margin of error when sample size increases?
+
+# Sample-size planning when sigma is known
+
+Suppose we want to estimate a population mean within E = 20 units,
+using sigma = 63 and 95% confidence.
+
+```{r}
+z_star <- qnorm(0.975)
+sigma <- 63
+E <- 20
+
+n_required <- (z_star * sigma / E)^2
+n_required
+ceiling(n_required)
+```
+
+# Your Turn
+
+A sample of 40 grading times has:
+
+- sample mean = 12.6 minutes
+- sample SD = 2.6 minutes
+
+Construct a 90% confidence interval manually using the t distribution.
+Then explain whether the interval supports the claim that the population mean exceeds 11 minutes.
