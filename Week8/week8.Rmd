@@ -1,0 +1,110 @@
+---
+title: "MAT 120 Computer Lab - Week 8"
+subtitle: "Sampling Distributions and the Central Limit Theorem"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Learning goals
+
+- understand that sample statistics vary from sample to sample,
+- simulate a sampling distribution,
+- connect sample size with standard error,
+- use the sampling distribution of the sample mean.
+
+# Create a population
+
+We create a positively skewed population.
+
+```{r}
+set.seed(120)
+population <- rexp(10000, rate = 1/20)
+
+hist(population,
+     main = "Population Distribution",
+     xlab = "Value")
+```
+
+Population mean and standard deviation:
+
+```{r}
+mean(population)
+sd(population)
+```
+
+# One random sample
+
+```{r}
+samp <- sample(population, 25)
+mean(samp)
+hist(samp)
+```
+
+# Sampling distribution of the mean
+
+Generate 5000 random samples of size 25 and store each sample mean.
+
+```{r}
+sample_means_25 <- replicate(
+  5000,
+  mean(sample(population, 25))
+)
+
+hist(sample_means_25,
+     main = "Sampling Distribution: n = 25",
+     xlab = "Sample Mean")
+```
+
+Now repeat with n = 100.
+
+```{r}
+sample_means_100 <- replicate(
+  5000,
+  mean(sample(population, 100))
+)
+
+hist(sample_means_100,
+     main = "Sampling Distribution: n = 100",
+     xlab = "Sample Mean")
+```
+
+Compare standard deviations:
+
+```{r}
+sd(sample_means_25)
+sd(sample_means_100)
+```
+
+# Questions
+
+1. Is the original population symmetric or skewed?
+2. What happens to the shape of the sample-mean distribution?
+3. Which sampling distribution has less spread: n = 25 or n = 100?
+4. Explain why using the standard-error formula.
+
+# Probability calculation
+
+Suppose bottle volume is normal with mean 16 oz and SD 0.6 oz.
+For samples of n = 25:
+
+```{r}
+mu <- 16
+sigma <- 0.6
+n <- 25
+
+se <- sigma / sqrt(n)
+se
+
+pnorm(15.8, mean = mu, sd = se)
+```
+
+# Your Turn
+
+A population has mean 50 and standard deviation 12.
+
+For random samples of n = 36:
+
+1. Find the mean of the sampling distribution of x-bar.
+2. Find the standard error.
+3. Find P(x-bar < 47).
