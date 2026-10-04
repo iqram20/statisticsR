@@ -1,8 +1,23 @@
-# MAT 120 Weekly Computer Labs
+# MAT 120 Statistics with R — Google Colab
 
-Weekly **R / RStudio computer labs** for an introductory statistics course (MAT 120).
+Weekly **R computer labs for MAT 120**, designed to run in **Google Colab**.
 
-This repository follows a simple Week-by-Week structure similar to the public `mecgoonline/MAT-120-Weekly-Computer-Labs` repository, but the lab exercises here are newly written for this class.
+Students do **not** need to install R or RStudio. Open the weekly notebook in Colab, run the R cells, answer the questions, and save/submit the completed notebook as instructed.
+
+## Open the labs in Google Colab
+
+| Week | Colab notebook |
+|---|---|
+| 1 | [Open Week 1 in Colab](https://colab.research.google.com/github/iqram20/statisticsR/blob/main/Week1/week1.ipynb) |
+| 2 | [Open Week 2 in Colab](https://colab.research.google.com/github/iqram20/statisticsR/blob/main/Week2/week2.ipynb) |
+| 3 | [Open Week 3 in Colab](https://colab.research.google.com/github/iqram20/statisticsR/blob/main/Week3/week3.ipynb) |
+| 4 | [Open Week 4 in Colab](https://colab.research.google.com/github/iqram20/statisticsR/blob/main/Week4/week4.ipynb) |
+| 5 | [Open Week 5 in Colab](https://colab.research.google.com/github/iqram20/statisticsR/blob/main/Week5/week5.ipynb) |
+| 6 | [Open Week 6 in Colab](https://colab.research.google.com/github/iqram20/statisticsR/blob/main/Week6/week6.ipynb) |
+| 7 | [Open Week 7 in Colab](https://colab.research.google.com/github/iqram20/statisticsR/blob/main/Week7/week7.ipynb) |
+| 8 | [Open Week 8 in Colab](https://colab.research.google.com/github/iqram20/statisticsR/blob/main/Week8/week8.ipynb) |
+| 9 | [Open Week 9 in Colab](https://colab.research.google.com/github/iqram20/statisticsR/blob/main/Week9/week9.ipynb) |
+| 10 | [Open Week 10 in Colab](https://colab.research.google.com/github/iqram20/statisticsR/blob/main/Week10/week10.ipynb) |
 
 ## Weekly topics
 
@@ -19,41 +34,26 @@ This repository follows a simple Week-by-Week structure similar to the public `m
 | 9 | Confidence intervals and margin of error |
 | 10 | One-sample hypothesis testing |
 
-## Software
+## Instructions for students
 
-Students may use:
+1. Click the **Open Week ... in Colab** link above.
+2. Sign in to your Google account if prompted.
+3. The notebook is configured for the **R** runtime.
+4. Run each code cell from top to bottom.
+5. Read the output and answer the interpretation questions.
+6. Complete the **Your Turn** section.
+7. Save a copy to Google Drive before editing if needed.
+8. Submit the completed `.ipynb` file or Colab link according to the course instructions.
 
-- R: https://www.r-project.org/
-- RStudio Desktop: https://posit.co/download/rstudio-desktop/
-- Posit Cloud: https://posit.cloud/
+## Files
 
-## How to use each lab
+Each week contains:
 
-1. Open the weekly `.Rmd` file.
-2. Read the explanation and examples.
-3. Run each R code chunk.
-4. Answer the interpretation questions.
-5. Complete the **Your Turn** section.
-6. Save the file and render to HTML/PDF if requested.
+- `week#.ipynb` — **use this file in Google Colab**
+- `week#.Rmd` — optional source/reference file
 
-## Repository structure
+The `resources` folder contains an R quick-reference sheet.
 
-```text
-statisticsR/
-├── README.md
-├── statisticsR.Rproj
-├── resources/
-│   └── R_Quick_Reference.md
-├── Week1/week1.Rmd
-├── Week2/week2.Rmd
-├── Week3/week3.Rmd
-├── Week4/week4.Rmd
-├── Week5/week5.Rmd
-├── Week6/week6.Rmd
-├── Week7/week7.Rmd
-├── Week8/week8.Rmd
-├── Week9/week9.Rmd
-└── Week10/week10.Rmd
-```
+## Important
 
-Computer output should support your statistical reasoning. Always explain what the result means in context.
+The goal is not only to run R code. You should also be able to explain what the statistical output means in the context of the problem.
