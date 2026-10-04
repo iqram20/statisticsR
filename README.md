@@ -2,7 +2,7 @@
 
 Course materials for **Prof. Iqram Hussain’s MAT 120 Statistics class at the City University of New York (CUNY)**.
 
-This repository contains weekly **R computer labs designed for Google Colab**, **in-class exercises using real open data**, and a **post-lab quiz after every lab**. Students do **not** need to install R or RStudio. Open the weekly notebook in Colab, run the R cells, answer the questions, and save/submit the completed notebook as instructed.
+This repository contains weekly **R computer labs designed for Google Colab**, **in-class exercises using real open data**, and a **post-lab quiz after every lab**. Students do **not** need to install R or RStudio. Open the weekly notebook in Colab, run the R cells, answer the questions, and save your completed notebook in Google Colab/Drive.
 
 ## Open the labs in Google Colab
 
@@ -56,10 +56,7 @@ See the full student instructions here:
 
 **[MAT 120 Weekly Lab Report — Simple Format](LAB_REPORT_GUIDE.md)**
 
-Each submission includes:
-
-- Completed Google Colab notebook (`.ipynb`)
-- Short lab report (`.pdf`, usually about 1 page)
+Students complete the weekly work in the Google Colab notebook and submit a **short lab report as a PDF through MyOpenMath**.
 
 The report should focus on three questions:
 
@@ -70,28 +67,14 @@ The report should focus on three questions:
 
 ## Weekly Lab Submission
 
-For each lab, students must submit **two files** through MyOpenMath:
+For each lab:
 
-### 1. Google Colab Notebook
+1. Complete the R lab in **Google Colab**.
+2. Keep your completed Colab notebook saved in your Google Drive.
+3. Prepare a short **lab report as a PDF**.
+4. Submit the **PDF lab report through MyOpenMath** under **Weekly Lab Submission**.
 
-Upload the completed R notebook as an `.ipynb` file.
-
-The notebook should include:
-
-- R code
-- R output
-- Graphs
-- In-class exercises
-- Open-data exercises
-- Post-lab quiz work
-
-Suggested file name:
-
-`LastName_FirstName_Lab.ipynb`
-
-### 2. Lab Report
-
-Upload a short lab report as a `.pdf` file.
+### Lab Report
 
 The report should normally be about **1 page** and include:
 
@@ -114,8 +97,6 @@ The report should focus on three questions:
 **What did you find?**  
 **What does it mean?**
 
-All lab files are submitted through **MyOpenMath**.
-
 
 ## Instructions for students
 
@@ -126,7 +107,7 @@ All lab files are submitted through **MyOpenMath**.
 5. Read the output and answer the interpretation questions.
 6. Complete the **Your Turn** section.
 7. Save a copy to Google Drive before editing if needed.
-8. Submit the completed `.ipynb` file or Colab link according to the course instructions.
+8. Prepare your short lab report as a PDF and submit the report through **MyOpenMath → Weekly Lab Submission**.
 
 ## Files
 
