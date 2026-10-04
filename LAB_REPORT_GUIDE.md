@@ -111,29 +111,15 @@ Answer:
 
 # Submit
 
-Submit **two files**:
-
-## 1. Completed Colab Notebook
+Submit **one PDF lab report through MyOpenMath** under **Weekly Lab Submission**.
 
 File name:
 
-`LastName_FirstName_Week##_Lab.ipynb`
-
-It should include:
-
-- R code
-- Output
-- Graphs
-- Class exercises
-- Post-lab quiz
-
-## 2. Short Lab Report PDF
-
-File name:
-
-`LastName_FirstName_Week##_Report.pdf`
+`LastName_FirstName_Report.pdf`
 
 The report should normally be about **1 page**.
+
+Your full R code, output, graphs, class exercises, and post-lab quiz work should remain in your completed Google Colab notebook. Keep the notebook saved in your Google Drive.
 
 Do not copy all of the Colab output into the report.
 
