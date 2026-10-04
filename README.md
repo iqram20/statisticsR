@@ -46,6 +46,26 @@ Each weekly Colab notebook now contains:
 
 The open-data activities use real NYC datasets such as **311 Service Requests**, **Motor Vehicle Collisions**, and **Air Quality and Health Impacts**.
 
+
+
+## Weekly Lab Report
+
+Students should submit a short report with each weekly lab.
+
+See the full student instructions here:
+
+**[MAT 120 Weekly Lab Report — Simple Format](LAB_REPORT_GUIDE.md)**
+
+Each submission includes:
+
+- Completed Google Colab notebook (`.ipynb`)
+- Short lab report (`.pdf`, usually about 1 page)
+
+The report should focus on three questions:
+
+**What did you do? What did you find? What does it mean?**
+
+
 ## Instructions for students
 
 1. Click the **Open Week ... in Colab** link above.
