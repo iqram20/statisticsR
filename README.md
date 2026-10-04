@@ -1,8 +1,8 @@
 # MAT 120 Statistics with R — Google Colab
 
-Weekly **R computer labs for MAT 120**, designed to run in **Google Colab**.
+Course materials for **Prof. Iqram Hussain’s MAT 120 Statistics class at the City University of New York (CUNY)**.
 
-Students do **not** need to install R or RStudio. Open the weekly notebook in Colab, run the R cells, answer the questions, and save/submit the completed notebook as instructed.
+This repository contains weekly **R computer labs designed for Google Colab**. Students do **not** need to install R or RStudio. Open the weekly notebook in Colab, run the R cells, answer the questions, and save/submit the completed notebook as instructed.
 
 ## Open the labs in Google Colab
 
