@@ -1,0 +1,85 @@
+---
+title: "MAT 120 Computer Lab - Week 4"
+subtitle: "Correlation and Linear Regression"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Learning goals
+
+- create a scatterplot,
+- describe direction, form, and strength,
+- calculate a correlation coefficient,
+- fit and interpret a least-squares regression line,
+- recognize extrapolation.
+
+# Example: Study time and exam score
+
+```{r}
+hours <- c(1,2,2,3,3,4,4,5,5,6,6,7)
+score <- c(58,61,65,66,70,72,75,78,81,84,86,91)
+```
+
+Scatterplot:
+
+```{r}
+plot(hours, score,
+     main = "Exam Score vs. Study Time",
+     xlab = "Study Time (hours)",
+     ylab = "Exam Score")
+```
+
+Correlation:
+
+```{r}
+cor(hours, score)
+```
+
+Regression model:
+
+```{r}
+fit <- lm(score ~ hours)
+summary(fit)
+```
+
+Add the regression line:
+
+```{r}
+plot(hours, score,
+     xlab = "Study Time (hours)",
+     ylab = "Exam Score")
+abline(fit)
+```
+
+Make a prediction for 5.5 hours.
+
+```{r}
+predict(fit, newdata = data.frame(hours = 5.5))
+```
+
+# Questions
+
+1. Identify the explanatory variable.
+2. Identify the response variable.
+3. Describe the direction of association.
+4. Is the association approximately linear?
+5. Interpret the slope in context.
+6. What does the sign of the correlation tell you?
+7. Would predicting a score for 20 hours be reliable? Explain.
+
+# Your Turn: Cars
+
+R contains the built-in `mtcars` data set.
+
+```{r}
+head(mtcars)
+```
+
+Study the relationship between vehicle weight (`wt`) and fuel economy (`mpg`).
+
+1. Make a scatterplot.
+2. Calculate the correlation.
+3. Fit `lm(mpg ~ wt)`.
+4. Add the regression line.
+5. Interpret the slope.
