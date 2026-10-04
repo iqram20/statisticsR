@@ -1,6 +1,5 @@
 # MAT 120 Weekly Lab Report — Simple Format
 
-**Instructor:** Prof. Iqram Hussain  
 **Student Name:** ____________________  
 **Week:** ____________________  
 **Date:** ____________________  
