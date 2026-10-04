@@ -1,0 +1,85 @@
+---
+title: "MAT 120 Computer Lab - Week 1"
+subtitle: "Sampling, Populations, Samples, and Variables"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Learning goals
+
+By the end of this lab, you should be able to:
+
+- distinguish a population from a sample,
+- identify an individual and a variable,
+- distinguish categorical and numerical variables,
+- generate a simple random sample using R.
+
+# 1. Getting started with R
+
+Try a few calculations.
+
+```{r}
+2 + 5
+10 / 4
+sqrt(81)
+```
+
+Create a vector of student ID numbers from 1 to 30.
+
+```{r}
+student_id <- 1:30
+student_id
+```
+
+# 2. Random sampling
+
+Select 5 students at random.
+
+```{r}
+sample(student_id, 5)
+```
+
+Run the command several times. Your sample should usually change.
+
+To make a result reproducible, set a random-number seed.
+
+```{r}
+set.seed(120)
+sample(student_id, 5)
+```
+
+# 3. Population and sample example
+
+Suppose a college has 300 students in an introductory statistics course.
+A professor randomly selects 15 students and records whether each completed
+the homework.
+
+```{r}
+homework <- c("Yes","Yes","No","Yes","Yes",
+              "Yes","Yes","No","Yes","Yes",
+              "Yes","Yes","Yes","No","Yes")
+table(homework)
+prop.table(table(homework))
+```
+
+## Questions
+
+1. What is the population?
+2. What is the sample?
+3. What is the sample size?
+4. What is the variable?
+5. Is the variable categorical or numerical?
+6. What proportion of sampled students completed the homework?
+7. Is that proportion a statistic or a parameter?
+
+# Your Turn
+
+A university has 800 students enrolled in introductory statistics.
+Use R to randomly choose 20 ID numbers from 1 through 800.
+
+```{r}
+# Write your code here
+```
+
+Explain why the selected 20 students form a **sample** rather than a population.
