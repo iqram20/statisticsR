@@ -1,0 +1,81 @@
+---
+title: "MAT 120 Computer Lab - Week 7"
+subtitle: "Normal Distribution"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Learning goals
+
+- standardize a value using a z-score,
+- find normal probabilities,
+- find percentiles and cutoff values,
+- interpret normal-model results in context.
+
+# Standard normal distribution
+
+Area to the left of z = 1.80:
+
+```{r}
+pnorm(1.80)
+```
+
+Area to the right:
+
+```{r}
+1 - pnorm(1.80)
+```
+
+Middle probability:
+
+```{r}
+pnorm(1.5) - pnorm(-1.5)
+```
+
+Find the z-score at the 95th percentile:
+
+```{r}
+qnorm(0.95)
+```
+
+# Example: Race finishing times
+
+Assume 10-km race times are normally distributed with:
+
+- mean = 61 minutes
+- standard deviation = 9 minutes
+
+Probability a randomly selected runner takes more than 72 minutes:
+
+```{r}
+1 - pnorm(72, mean = 61, sd = 9)
+```
+
+Probability between 52 and 70 minutes:
+
+```{r}
+pnorm(70, mean = 61, sd = 9) -
+  pnorm(52, mean = 61, sd = 9)
+```
+
+95th percentile:
+
+```{r}
+qnorm(0.95, mean = 61, sd = 9)
+```
+
+# Questions
+
+1. Find the z-score corresponding to 72 minutes.
+2. Interpret the probability above 72 minutes.
+3. Interpret the 95th percentile in context.
+
+# Your Turn
+
+Suppose exam scores are normally distributed with mean 72 and standard deviation 8.
+
+1. Find P(X > 80).
+2. Find P(65 < X < 85).
+3. Find the 90th percentile.
+4. Find the cutoff for the top 15% of scores.
