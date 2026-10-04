@@ -1,0 +1,89 @@
+---
+title: "MAT 120 Computer Lab - Week 2"
+subtitle: "Frequency Tables and Graphs"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Learning goals
+
+- construct frequency and relative-frequency tables,
+- create bar charts for categorical data,
+- create histograms for quantitative data,
+- recognize discrete and continuous variables.
+
+# 1. Categorical data
+
+A class survey asked students how they usually travel to campus.
+
+```{r}
+transport <- c(
+  "Subway","Bus","Subway","Walk","Subway","Bus","Car","Subway",
+  "Walk","Bus","Subway","Subway","Car","Bus","Walk","Subway",
+  "Bus","Subway","Walk","Subway"
+)
+
+freq <- table(transport)
+freq
+```
+
+Relative frequency:
+
+```{r}
+rel_freq <- prop.table(freq)
+rel_freq
+```
+
+Bar chart:
+
+```{r}
+barplot(freq,
+        main = "Transportation to Campus",
+        xlab = "Transportation Method",
+        ylab = "Frequency")
+```
+
+# 2. Quantitative data
+
+The following values are the numbers of minutes 30 students spent commuting.
+
+```{r}
+commute <- c(
+  18,22,25,27,29,30,31,33,35,35,
+  36,38,39,40,41,42,43,45,46,48,
+  50,52,54,55,58,60,62,67,72,80
+)
+```
+
+Create a histogram.
+
+```{r}
+hist(commute,
+     main = "Student Commute Times",
+     xlab = "Commute Time (minutes)",
+     ylab = "Frequency")
+```
+
+# Questions
+
+1. What is the individual in the transportation example?
+2. What is the variable?
+3. Why is a bar chart appropriate?
+4. What is the variable in the commute example?
+5. Is commute time discrete or continuous?
+6. Describe the approximate shape of the commute-time distribution.
+
+# Your Turn
+
+Use the data below.
+
+```{r}
+coffee <- c(12,18,21,15,25,24,17,19,22,28,
+            11,16,20,23,27,14,18,22,26,30)
+```
+
+1. Make a histogram.
+2. Find the minimum and maximum.
+3. Estimate a reasonable class/bin width.
+4. State whether the variable is discrete or continuous in context.
