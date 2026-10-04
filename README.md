@@ -66,6 +66,57 @@ The report should focus on three questions:
 **What did you do? What did you find? What does it mean?**
 
 
+
+
+## Weekly Lab Submission
+
+For each lab, students must submit **two files** through MyOpenMath:
+
+### 1. Google Colab Notebook
+
+Upload the completed R notebook as an `.ipynb` file.
+
+The notebook should include:
+
+- R code
+- R output
+- Graphs
+- In-class exercises
+- Open-data exercises
+- Post-lab quiz work
+
+Suggested file name:
+
+`LastName_FirstName_Lab.ipynb`
+
+### 2. Lab Report
+
+Upload a short lab report as a `.pdf` file.
+
+The report should normally be about **1 page** and include:
+
+- Goal of the lab
+- Data used
+- Main statistical result(s)
+- One important graph or table, when appropriate
+- Explanation of what the results mean
+- Short conclusion
+
+Suggested file name:
+
+`LastName_FirstName_Report.pdf`
+
+Do not copy the entire Google Colab notebook into the report.
+
+The report should focus on three questions:
+
+**What did you do?**  
+**What did you find?**  
+**What does it mean?**
+
+All lab files are submitted through **MyOpenMath**.
+
+
 ## Instructions for students
 
 1. Click the **Open Week ... in Colab** link above.
