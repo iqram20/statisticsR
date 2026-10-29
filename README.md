@@ -42,11 +42,15 @@ Each weekly Colab notebook now contains:
 2. Additional in-class practice
 3. A real-data exercise using public/open datasets, including NYC Open Data
 4. Interpretation questions
-5. A post-lab quiz
+5. A self-guided 6-question post-lab quiz with multiple-choice concepts, a short calculation/R task, and a collapsible explained answer check
 
 The open-data activities use real NYC datasets such as **311 Service Requests**, **Motor Vehicle Collisions**, and **Air Quality and Health Impacts**.
 
 
+
+### Post-lab quiz design
+
+Each weekly quiz is intentionally less guided than the classwork. Students should attempt all six questions first, then open the collapsible **Check Your Answers** section. The answer section explains why each answer is correct, so students can review independently without needing repeated instructor clarification.
 
 ## Weekly Lab Report
 
